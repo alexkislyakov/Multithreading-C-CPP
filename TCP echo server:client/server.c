@@ -5,10 +5,6 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <string.h>
-#include <fcntl.h>
-
-//sudo dtruss 
-//telnet 127.0.0.1 12345
 
 const int BUFFER_SIZE = 1024;
 
