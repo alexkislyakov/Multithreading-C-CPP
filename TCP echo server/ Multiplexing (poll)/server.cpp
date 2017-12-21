@@ -13,8 +13,8 @@ const int POLL_SIZE = 2048;
 const int BUFFER_SIZE = 1024;
 
 void error(const std::string &msg) {
-  perror(msg.c_str());
-  exit(EXIT_FAILURE);
+    perror(msg.c_str());
+    exit(EXIT_FAILURE);
 }
 
 int set_nonblock(int fd) {
