@@ -90,8 +90,12 @@ int main(int argc, char *argv[argc])
                     }
                 } else {
                     int SlaveSocket = accept(MasterSocket, 0, 0);
-                    set_nonblock(SlaveSocket);
-                    SlaveSockets.insert(SlaveSocket);
+                    if (SlaveSocket != -1) {
+                        set_nonblock(SlaveSocket);
+                        SlaveSockets.insert(SlaveSocket);
+                    } else {
+                        perror("Error on accept");
+                    }
                 }
             }
         }
